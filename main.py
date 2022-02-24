@@ -6,6 +6,7 @@ files = ["a_an_example.in.txt"]
 def process(files):
     for file in files:
         listContributor = []
+        listProjet = []
         with open(file, "r") as f:
             C, P = (f.readline().split())
             for i in range(int (C)):
@@ -14,7 +15,7 @@ def process(files):
                 listContributor.append(contributor)
                 for j in range(int (numberSkill)):
                     skill, lvl = f.readline().split()
-        print(listContributor)
+            
             
             
 
