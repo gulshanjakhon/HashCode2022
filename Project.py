@@ -6,3 +6,4 @@ class Project:
 
     def addSkill(self, skillName, lvl):
         self.skills[skillName] = lvl
+
