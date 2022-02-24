@@ -1,21 +1,25 @@
+from contributor import Contributor
 
-
-files = ["e_elaborate.in"]
+files = ["a_an_example.in.txt"]
 
 
 def process(files):
     for file in files:
-        print("processing")
-        with open(file + ".txt", "r") as f:
-            C = (int) (f.readline())
-            print(C)
-            for i in range(C):
-                like_content = f.readline().split()
-                dislike_content = f.readline().split()
+        listContributor = []
+        with open(file, "r") as f:
+            C, P = (f.readline().split())
+            for i in range(int (C)):
+                name, numberSkill = f.readline().split()
+                contributor = Contributor(name)
+                listContributor.append(contributor)
+                for j in range(int (numberSkill)):
+                    skill, lvl = f.readline().split()
+        print(listContributor)
+            
             
 
-        with open("out/" + file + ".out", 'w+') as f:
-           pass # for output
+        #with open("out/" + file + ".out", 'w+') as f:
+        #pass # for output
         
         
 if (__name__==  "__main__"):
